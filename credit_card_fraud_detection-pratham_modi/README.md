@@ -1,0 +1,108 @@
+FraudGuard — Credit Card Fraud Detection
+
+AI-powered web application for detecting credit card fraud using Machine Learning.
+
+Built using Random Forest, threshold tuning, and a full analytical pipeline focused on real-world decision making.
+
+Final Model: Random Forest
+Threshold: 0.40
+Recall: 80%
+Precision: 70.4%
+F1 Score: 74.8%
+
+Tech Stack
+Python 3.8+
+Scikit-learn (Logistic Regression, Decision Tree, Random Forest)
+Pandas, NumPy
+Matplotlib, Seaborn
+Streamlit
+Dataset
+
+Download creditcard.csv from Kaggle:
+https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
+Place it in the project root folder (same folder as app.py).
+
+Project Structure
+
+fraudguard/
+├── app.py
+├── save_models.py
+├── requirements.txt
+├── creditcard.csv
+├── models/
+└── reports/
+├── report1.md
+├── report2.md
+├── report3.md
+├── report4.md
+└── model_code.py
+
+Setup Instructions
+Clone the repository
+
+git clone https://github.com/pratham-modi1/credit
+
+cd credit
+
+Create virtual environment (recommended)
+
+python -m venv venv
+
+Windows:
+venv\Scripts\activate
+
+Mac/Linux:
+source venv/bin/activate
+
+Install dependencies
+
+pip install -r requirements.txt
+
+Train model and save artifacts (run once)
+
+python save_models.py
+
+This step will:
+
+Load and preprocess the dataset
+Train Logistic Regression, Decision Tree, and Random Forest
+Perform threshold tuning
+Save trained models and scalers
+Run the application
+
+streamlit run app.py
+
+The app will open at:
+http://localhost:8501
+
+Application Pages
+
+Home → Project overview and fraud insights
+Predict → Input transaction details and get predictions
+Visualize → Data analysis and model insights
+Report → Full technical report and annotated code
+
+Deployment (Streamlit Cloud)
+Push project to GitHub
+Go to https://streamlit.io/cloud
+Create new app → select repo → set app.py
+Deploy
+
+Note:
+
+Ensure dataset is available (via Git LFS or other method)
+Ensure .pkl model files are committed
+Notes
+This project handles extreme class imbalance (0.17% fraud rate)
+Accuracy is not used as the primary evaluation metric
+Threshold tuning balances recall and precision
+Links
+
+Live App: https://creditfraudguard.streamlit.app/
+
+GitHub: https://github.com/pratham-modi1/credit
+
+Author
+
+Pratham Modi
